@@ -80,6 +80,13 @@ publishing {
 configurations.clientCompile.extendsFrom(configurations.compileClasspath)
 configurations.clientRuntime.extendsFrom(configurations.runtimeClasspath)
 
+// Also add explicit client compile dependencies for Minecraft/Fabric to ensure client APIs are available
+dependencies {
+    clientCompile "com.mojang:minecraft:${project.minecraft_version}"
+    clientCompile "net.fabricmc:fabric-loader:${project.loader_version}"
+    clientCompile "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+}
+
 // Ensure the client source set is compiled and included when running the client
 tasks.named('runClient') {
     dependsOn tasks.named('compileClientJava')
