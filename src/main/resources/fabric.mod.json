@@ -17,13 +17,16 @@
 	"entrypoints": {
 		"main": [
 			"trackbets.BetTracker"
+		],
+		"client": [
+			"trackbets.BetTrackerClient"
 		]
 	},
 	"mixins": [
 		"bet-tracker.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.18.1",
+				"fabricloader": ">=0.17.3",
 		"minecraft": "~1.21.10",
 		"java": ">=21",
 		"fabric-api": "*"
