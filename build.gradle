@@ -76,6 +76,10 @@ publishing {
      clientRuntime sourceSets.main.output
  }
 
+// Make client configurations inherit main compile/runtime classpaths so client code sees Minecraft and Fabric API
+configurations.clientCompile.extendsFrom(configurations.compileClasspath)
+configurations.clientRuntime.extendsFrom(configurations.runtimeClasspath)
+
 // Ensure the client source set is compiled and included when running the client
 tasks.named('runClient') {
     dependsOn tasks.named('compileClientJava')
