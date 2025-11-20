@@ -14,7 +14,6 @@ Structure
 
 Prerequisites
 - JDK 21 installed and `JAVA_HOME` pointing to it
-- Git (for working with the repository)
 
 Common commands (PowerShell)
 
