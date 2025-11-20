@@ -75,3 +75,15 @@ publishing {
      clientCompile sourceSets.main.output
      clientRuntime sourceSets.main.output
  }
+
+// Ensure the client source set is compiled and included when running the client
+tasks.register('compileClientJava') {
+    dependsOn sourceSets.client.java
+}
+
+tasks.named('runClient') {
+    dependsOn tasks.named('compileClientJava')
+    doFirst {
+        classpath += sourceSets.client.runtimeClasspath
+    }
+}
