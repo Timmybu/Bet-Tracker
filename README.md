@@ -1,4 +1,5 @@
 # Bet Tracker
+TERRIBLE MOD PLEASE DONT USE THIS
 
 This is a Fabric mod workspace for Minecraft 1.21.10 containing the `bet-tracker` mod skeleton and the `PaymentScreen` GUI (client-side).
 
